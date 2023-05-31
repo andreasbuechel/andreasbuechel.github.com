@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      li {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        border: 0.0725rem lightgrey solid;
+        border-radius: 0.5rem;
+        /* margin-bottom: 1rem; */
+      }
+      li > img {
+        display: inline-block;
+        margin-right: 1rem;
+      }
+      category-name {
+        width: 100%;
+      }
+      #category-value {
+        color: black;
+        font-weight: bold;
+      }
+      #category-max {
+        justify-self: center;
+        color: darkgrey;
+      }
+      #category-max::before {
+        content: "/";
+        margin: 0.5rem;
+        color: darkgrey;
+      }
+      #category-max {
+        font-weight: bold;
+      }
+      header * {
+        width: fit-content;
+      }
+      * {
+        font-family: HankenGrotesk, sans-serif;
+        /* outline: 1px dashed lightgrey; */
+        min-width: max-content;
+      }
+      @font-face {
+        font-family: "HankenGrotesk";
+        src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf)
+          format("truetype");
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="mx-auto flex flex-col sm:justify-center sm:flex-row">
+    <header
+      class="px-4 pt-8 pb-12 bg-gradient-to-b from-[#751cfc] to-[#4523bf] flex flex-col items-center rounded-b-[2rem] sm:rounded-t-[2rem]"
+    >
+      <p class="text-xl font-medium text-neutral-400">Your Result</p>
+
+      <div
+        class="my-5 aspect-square w-40 rounded-full flex flex-col justify-center items-center bg-gradient-to-b from-black/30 to-transparent"
+      >
+        <p class="text-6xl font-bold text-neutral-300">76</p>
+        <p class="font-semibold text-neutral-500">of 100</p>
+      </div>
+
+      <p class="text-2xl font-medium text-neutral-300">Great</p>
+      <p class="text-center text-neutral-400">
+        You scored higher than 65% of the<br />people who have taken these
+        tests.
+      </p>
+    </header>
+    <div class="p-8 overflow-scroll">
+      <p class="mb-4 text-base font-bold">Summary</p>
+      <ul class="flex flex-col justify-between gap-4">
+        <li class="text-red-500 bg-red-500/5">
+          <img src="assets/images/icon-reaction.svg" alt="R" />
+          <category-name id="category-name">Reaction</category-name>
+          <span id="category-value">80</span>
+          <span id="category-max">100</span>
+        </li>
+        <li class="text-yellow-500 bg-yellow-500/5">
+          <img src="assets/images/icon-memory.svg" alt="M" />
+          <category-name id="category-name">Memory</category-name>
+          <span id="category-value">92</span>
+          <span id="category-max">100</span>
+        </li>
+        <li class="text-green-500 bg-green-500/5">
+          <img src="assets/images/icon-verbal.svg" alt="V" />
+          <category-name id="category-name">Verbal</category-name>
+          <span id="category-value">61</span>
+          <span id="category-max">100</span>
+        </li>
+        <li class="text-blue-500 bg-blue-500/5">
+          <img src="assets/images/icon-visual.svg" alt="V" />
+          <category-name id="category-name">Visual</category-name>
+          <span id="category-value">72</span>
+          <span id="category-max">100</span>
+        </li>
+      </ul>
+      <button
+        class="mt-6 h-16 w-full rounded-full text-lg text-white bg-sky-950"
+      >
+        Continue
+      </button>
+    </div>
+  </body>
+</html>
